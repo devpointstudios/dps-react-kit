@@ -32,6 +32,7 @@ const WebpackConfig = {
 
 if (process.env.NODE_ENV === 'production' ) {
   WebpackConfig.externals = {
+    'react': 'react',
     'react-dom': 'react-dom',
     'redux': 'redux',
     'react-redux': 'react-redux',
