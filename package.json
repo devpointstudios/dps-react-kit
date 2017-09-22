@@ -1,0 +1,44 @@
+{
+  "name": "@devpoint/dps-react-kit",
+  "version": "1.0.0",
+  "description": "A simple self destructing flash component for React",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build:dev": "NODE_ENV=development webpack",
+    "build:production": "NODE_ENV=production webpack -p",
+    "prepublish": "npm run build:production"
+  },
+  "homepage": "https://github.com/devpointstudios/dps-kit.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devpointstudios/dps-kit.git"
+  },
+  "author": "devpoint",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "semantic-ui-react": "^0.73.1",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "semantic-ui-react": "^0.73.1",
+    "webpack": "^2.6.0"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.0"
+  }
+}
