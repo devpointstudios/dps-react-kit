@@ -6,9 +6,9 @@ import { connect } from 'react-redux';
 class NavBar extends Component {
   // routes example = [{text: 'About Us', url: '/about'}, {text: 'FAQ', url: '/faq'}]
   linksDisplay = (routes = []) => {
-    return routes.map( route => {
+    return routes.map( (route, index) => {
       return(
-        <Link to={route.url}>
+        <Link key={index} to={route.url}>
           <Menu.Item name={route.text} />
         </Link>
       )
