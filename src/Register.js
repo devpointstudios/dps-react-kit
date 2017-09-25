@@ -5,18 +5,17 @@ import { connect } from 'react-redux';
 class Register extends Component {
   state = { email: '', password: '', passwordConfirmation: '' };
 
-  handleSubmit = event => {
-    event.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault();
     const { email, password, passwordConfirmation } = this.state;
-    const { dispatch, history, registerUser = (f) => f } = this.props;
+    const { dispatch, history, registerUser = (reg) => reg, setFlash = (f) => f} = this.props;
     if (password === passwordConfirmation) {
       dispatch(registerUser(email, password, passwordConfirmation, history));
     } else dispatch(setFlash('Passwords do not match!, please try again', 'red'));
   }
 
-  handleChange = event => {
-    const id = event.target.id;
-    const value = event.target.value;
+  handleChange = (e) => {
+    const { id, value } = e.target;
     this.setState({ [id]: value });
   }
 
